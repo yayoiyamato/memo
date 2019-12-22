@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MemosController@index');
+Route::get('/detail/{id}', 'MemosController@detail');
+Route::get('/categories', 'MemosController@categories');
+Route::get('/categories/{id}', 'MemosController@MemosInCategory');
+Route::get('/add', 'MemosController@add');
