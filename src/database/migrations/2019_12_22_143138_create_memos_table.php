@@ -17,7 +17,7 @@ class CreateMemosTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('title', 100);	
             $table->integer('category_id')->nullable();
-            $table->string('type', 2);	
+            $table->char('type', 2);	
             $table->longText('text');
             $table->boolean('is_show')->default(1);
             $table->timestamps(0);
