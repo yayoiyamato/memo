@@ -1,0 +1,519 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  list-style: none;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote before,
+blockquote after,
+q before,
+q after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: bottom;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+.anm-jelly {
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  transform-origin: bottom center;
+  animation-name: jelly;
+}
+.anm-flush {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-name: flush;
+}
+.anm-error {
+  animation: shakeX 0.3s;
+  animation-iteration-count: 3;
+}
+@-moz-keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  8% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 0.9);
+  }
+  13% {
+    transform: scale(0.9, 1.1);
+  }
+  17.5% {
+    transform: scale(1, 1);
+  }
+  19% {
+    transform: scale(1, 1);
+  }
+  58% {
+    transform: scale(1, 1);
+  }
+  60% {
+    transform: scale(1.1, 0.9);
+  }
+  63% {
+    transform: scale(0.9, 1.1);
+  }
+  67.5% {
+    transform: scale(1, 1);
+  }
+  69% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  8% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 0.9);
+  }
+  13% {
+    transform: scale(0.9, 1.1);
+  }
+  17.5% {
+    transform: scale(1, 1);
+  }
+  19% {
+    transform: scale(1, 1);
+  }
+  58% {
+    transform: scale(1, 1);
+  }
+  60% {
+    transform: scale(1.1, 0.9);
+  }
+  63% {
+    transform: scale(0.9, 1.1);
+  }
+  67.5% {
+    transform: scale(1, 1);
+  }
+  69% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-o-keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  8% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 0.9);
+  }
+  13% {
+    transform: scale(0.9, 1.1);
+  }
+  17.5% {
+    transform: scale(1, 1);
+  }
+  19% {
+    transform: scale(1, 1);
+  }
+  58% {
+    transform: scale(1, 1);
+  }
+  60% {
+    transform: scale(1.1, 0.9);
+  }
+  63% {
+    transform: scale(0.9, 1.1);
+  }
+  67.5% {
+    transform: scale(1, 1);
+  }
+  69% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  8% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 0.9);
+  }
+  13% {
+    transform: scale(0.9, 1.1);
+  }
+  17.5% {
+    transform: scale(1, 1);
+  }
+  19% {
+    transform: scale(1, 1);
+  }
+  58% {
+    transform: scale(1, 1);
+  }
+  60% {
+    transform: scale(1.1, 0.9);
+  }
+  63% {
+    transform: scale(0.9, 1.1);
+  }
+  67.5% {
+    transform: scale(1, 1);
+  }
+  69% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-moz-keyframes flush {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes flush {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes flush {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes flush {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes shakeX {
+  0% {
+    transform: translateX(8px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes shakeX {
+  0% {
+    transform: translateX(8px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-o-keyframes shakeX {
+  0% {
+    transform: translateX(8px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes shakeX {
+  0% {
+    transform: translateX(8px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+html,
+body {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "pkna";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, "Helvetica Neue", Arial, "メイリオ", Meiryo, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  letter-spacing: -0.008em;
+  color: #15181b;
+  cursor: crosshair;
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  margin: 0 0 0 20px;
+  background: rgba(255,255,255,0);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(21,24,27,0.32);
+}
+br.sp__br {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  br.sp__br {
+    display: block;
+  }
+}
+.container {
+  display: flex;
+}
+.contents {
+  padding: 20px;
+}
+.wrap {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 960px) {
+  .wrap {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+a {
+  position: relative;
+  transition: 0.16s;
+  display: inline-block;
+  color: #15181b;
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  color: #15181b;
+  text-decoration: none;
+}
+img {
+  transition: 0.3s;
+}
+img[lazy=loading] {
+  opacity: 0;
+}
+img[lazy=loaded] {
+  opacity: 1;
+}
+.sidemenu {
+  width: 200px;
+  min-height: 100vh;
+  background: #d9d4cf;
+}
+.sidemenu li a {
+  padding: 20px;
+}

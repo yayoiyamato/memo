@@ -1,1 +1,0 @@
-<footer>footerです</footer>
