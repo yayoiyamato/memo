@@ -1,0 +1,39 @@
+.countArea
+  margin 10px 0
+  display flex
+  .count
+    line-height 20px
+  .pager
+    margin-left 30px
+    display flex
+    a
+      padding 0 7px
+      margin-right 10px
+      text-align center
+      line-height 20px
+      border 1px solid gray-color-light
+      rounded(20px)
+      &.act, &:hover
+        color white-color-main
+        background-color pink-color-main
+
+.memoList
+  width 100%
+  border 1px solid gray-color-light
+  border-bottom none
+  tbody
+    tr
+      &:nth-child(odd)
+        background-color gray-color-light2
+      &:hover
+        background-color yellow-color-light
+  th
+    padding 10px 15px
+    border-bottom 2px solid gray-color-light
+    color pink-color-main
+    &.title
+      min-width 60%
+  td
+    padding 10px 15px
+    border-bottom 1px solid gray-color-light
+    text-align center

@@ -438,16 +438,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-display: swap;
   -webkit-overflow-scrolling: touch;
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, "Helvetica Neue", Arial, "メイリオ", Meiryo, sans-serif;
+  font-family: 'Open Sans', Meiryo, 'メイリオ', Arial, sans-serif;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   scroll-behavior: smooth;
   letter-spacing: -0.008em;
-  color: #15181b;
-  cursor: crosshair;
+  color: #333;
 }
 ::-webkit-scrollbar {
   width: 2px;
@@ -458,7 +457,7 @@ body {
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(21,24,27,0.32);
+  background: rgba(51,51,51,0.32);
 }
 br.sp__br {
   display: none;
@@ -472,7 +471,9 @@ br.sp__br {
   display: flex;
 }
 .contents {
+  width: calc(100vw - 200px);
   padding: 20px;
+  box-sizing: border-box;
 }
 .wrap {
   max-width: 1280px;
@@ -490,14 +491,14 @@ a {
   position: relative;
   transition: 0.16s;
   display: inline-block;
-  color: #15181b;
+  color: #333;
   text-decoration: none;
 }
 a:hover,
 a:active,
 a:visited,
 a:focus {
-  color: #15181b;
+  color: #333;
   text-decoration: none;
 }
 img {
@@ -509,11 +510,112 @@ img[lazy=loading] {
 img[lazy=loaded] {
   opacity: 1;
 }
+select,
+input,
+button {
+  padding: 6px;
+  border-radius: 3px;
+}
+input {
+  border: solid 1px #a9a9a9;
+}
 .sidemenu {
   width: 200px;
   min-height: 100vh;
-  background: #d9d4cf;
+  background: #f37a8d;
 }
 .sidemenu li a {
-  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.sidemenu li a:hover {
+  background-color: #fff;
+  color: #f37a8d;
+}
+.sidemenu li a i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+.searchArea {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.searchArea label {
+  display: block;
+  margin-bottom: 8px;
+}
+.searchArea select {
+  min-width: 200px;
+}
+.searchArea .category {
+  margin-right: 20px;
+}
+.searchArea .type {
+  margin-right: 20px;
+}
+.searchArea .keyword button {
+  background-color: #f37a8d;
+  color: #fff;
+  margin-left: 5px;
+  padding: 7px;
+  border: 1px solid #f37a8d;
+  transition: 0.16s;
+}
+.searchArea .keyword button:hover {
+  background: #fff;
+  color: #f37a8d;
+}
+.countArea {
+  margin: 10px 0;
+  display: flex;
+}
+.countArea .count {
+  line-height: 20px;
+}
+.countArea .pager {
+  margin-left: 30px;
+  display: flex;
+}
+.countArea .pager a {
+  padding: 0 7px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid #ccc;
+  height: 20px;
+  border-radius: 10px;
+}
+.countArea .pager a.act,
+.countArea .pager a:hover {
+  color: #fff;
+  background-color: #f37a8d;
+}
+.memoList {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.memoList tbody tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+.memoList tbody tr:hover {
+  background-color: #fcfade;
+}
+.memoList th {
+  padding: 10px 15px;
+  border-bottom: 2px solid #ccc;
+  color: #f37a8d;
+}
+.memoList th.title {
+  min-width: 60%;
+}
+.memoList td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
 }
