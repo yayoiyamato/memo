@@ -4,6 +4,10 @@
             <label for="category">カテゴリ</label>
             <select name="category">
                 <option value="">すべて</option>
+                <option value="1">Laravel</option>
+                <option value="2">PHP</option>
+                <option value="3">共通</option>
+                <option value="4">検索フォーム</option>
             </select>
         </form>
     </div>
@@ -11,6 +15,7 @@
         <form action="">
             <label for="type">形式</label>
             <select name="type">
+                <option value="">すべての形式</option>
                 <option value="md">マークダウン</option>
                 <option value="sn">スニペット</option>
             </select>
