@@ -16,8 +16,9 @@
             <label for="type">形式</label>
             <select name="type">
                 <option value="">すべての形式</option>
-                <option value="md">マークダウン</option>
-                <option value="sn">スニペット</option>
+            @foreach($types as $type)
+                <option value="{{ $type['code'] }}">{{ $type['name'] }}</option>
+            @endforeach
             </select>
         </form>
     </div>

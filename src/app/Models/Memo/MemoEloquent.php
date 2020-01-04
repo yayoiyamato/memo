@@ -6,6 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class MemoEloquent extends Model
 {
+    /**
+     * 形式の定数
+     *
+     * @var array
+     */
+    const TYPES = [
+        [
+            'name' => 'マークダウン',
+            'code' => 'md'
+        ],
+        [
+            'name' => 'スニペット',
+            'code' => 'sn'
+        ]
+    ];
 
     /**
      * モデルと関連しているテーブル

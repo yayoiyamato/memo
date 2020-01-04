@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Models\Memo\MemoEloquent;
 
 class MemosController extends Controller
 {
@@ -15,7 +16,8 @@ class MemosController extends Controller
     public function index()
     {
         $view = view('front.pages.index')
-                ->with('title','めも一覧');
+                ->with('title','めも一覧')
+                ->with('types',MemoEloquent::TYPES);
         return $view;
     }
 
