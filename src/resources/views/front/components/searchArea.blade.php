@@ -4,10 +4,9 @@
             <label for="category">カテゴリ</label>
             <select name="category">
                 <option value="">すべて</option>
-                <option value="1">Laravel</option>
-                <option value="2">PHP</option>
-                <option value="3">共通</option>
-                <option value="4">検索フォーム</option>
+            @foreach($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
             </select>
         </form>
     </div>

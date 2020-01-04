@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Models\Memo\MemoEloquent;
+use App\Models\Category\CategoryEloquent;
 
 class MemosController extends Controller
 {
@@ -15,9 +16,11 @@ class MemosController extends Controller
      */
     public function index()
     {
+        $categories = CategoryEloquent::get();
         $view = view('front.pages.index')
                 ->with('title','めも一覧')
-                ->with('types',MemoEloquent::TYPES);
+                ->with('types',MemoEloquent::TYPES)
+                ->with('categories', $categories);
         return $view;
     }
 

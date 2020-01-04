@@ -3,9 +3,12 @@
 namespace App\Models\Category;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Services\Scopes\IsShow;
 
 class CategoryEloquent extends Model
 {
+    use IsShow;
+
     /**
      * モデルと関連しているテーブル
      *
