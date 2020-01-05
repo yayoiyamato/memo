@@ -47,8 +47,13 @@ class MemosController extends Controller
      */
     public function categories()
     {
-        $view = view('front.pages.categories')
-                ->with('title','カテゴリ一覧');
+        foreach (config('const.TYPES_OF_MEMO') as $key => $type) {
+            $categories[$key] = CategoryEloquent::where('type', $key)->get();
+        }
+
+         $view = view('front.pages.categories')
+                ->with('title','カテゴリ一覧')
+                ->with('categories',$categories);
         return $view;
     }
 
@@ -60,9 +65,11 @@ class MemosController extends Controller
      */
     public function MemosInCategory($id)
     {
+
         $view = view('front.pages.memos_in_category')
                 ->with('id', $id)
                 ->with('title','カテゴリのめも一覧');
+
         return $view;
     }
 

@@ -6,7 +6,13 @@ return [
         'NO'=> 0
     ],
     'TYPES_OF_MEMO' => [
-        'md' => 'マークダウン',
-        'sn' => 'スニペット'
+        'md' => [
+            'name' => 'マークダウン',
+            'icon_class' => 'fab fa-markdown'
+        ],
+        'sn' => [
+            'name' => 'スニペット',
+            'icon_class' => 'fas fa-code'
+        ]
     ]
 ];

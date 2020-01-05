@@ -632,21 +632,13 @@ input {
 }
 .categoryList dt {
   color: #f37a8d;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   padding: 15px;
   border-bottom: 1px solid #ccc;
 }
-.categoryList dt:before {
-  content: '\f60f';
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
+.categoryList dt i {
   margin-right: 5px;
-}
-.categoryList dt.sn:before {
-  content: '\f121';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
 }
 .categoryList dd {
   padding: 15px;

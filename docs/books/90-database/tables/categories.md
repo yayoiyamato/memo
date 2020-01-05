@@ -10,6 +10,7 @@
 | id         |    int    |  10   |   o    |          |       |    A_I     | ID           |
 | name       |  varchar  |  100  |        |          |       |            | カテゴリ名称 |
 | slug       |  varchar  |  100  |        |          |       |            | スラッグ     |
+| type       |   char    |   2   |        |          |       |            | 記述タイプ   |
 | order      |    int    |  10   |        |          |   o   |            | 並び順       |
 | is_show    |  tinyint  |   1   |        |          |       |     1      | 表示フラグ   |
 | created_at | timestamp |       |        |          |       | 0000-00-00 | 登録日時     |
@@ -21,9 +22,10 @@
 | [memos](memos.md) | 多対多 | [memo_category](memo_category.md) | category_id |           | memo_id    |
 
 ## フラグ系の説明
-| 物理名  | 説明             |
-| :------ | :--------------- |
-| is_show | 1:表示　0:非表示 |
+| 物理名  | 説明                           |
+| :------ | :----------------------------- |
+| type    | md:マークダウン　sn:スニペット |
+| is_show | 1:表示　0:非表示               |
 
 ## 最終記述日
 2019/12/22

@@ -16,7 +16,7 @@
             <select name="type">
                 <option value="">すべての形式</option>
             @foreach(config('const.TYPES_OF_MEMO') as $key=>$type)
-                <option value="{{ $key }}">{{ $type }}</option>
+                <option value="{{ $key }}">{{ $type['name'] }}</option>
             @endforeach
             </select>
         </form>

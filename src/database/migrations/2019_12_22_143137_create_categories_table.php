@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('name', 100);	
             $table->string('slug', 100);	
+            $table->char('type', 2);	
             $table->integer('order')->nullable()->unsigned();
             $table->boolean('is_show')->default(1);
             $table->timestamps(0);

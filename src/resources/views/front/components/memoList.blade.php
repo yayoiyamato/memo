@@ -12,7 +12,7 @@
         <tr data-href="">
             <td>めもカテゴリ</td>
             <td>{{ $memo->title }}</td>
-            <td>{{ config('const.TYPES_OF_MEMO')[$memo->type] }}</td>
+            <td>{{ config('const.TYPES_OF_MEMO')[$memo->type]['name']}}</td>
             <td>{{ $memo->created_at }}</td>
         </tr>
     @endforeach
