@@ -29,4 +29,14 @@ class CategoryEloquent extends Model
      * @var array
      */
     protected $attributes = [];
+
+    public $timestamps = true;
+
+    /**
+     * 多対多 めも
+     */
+    public function memos()
+    {
+        return $this->belongsToMany('App\Models\Memo\MemoEloquent', 'memo_category', 'category_id', 'memo_id');
+    }
 }

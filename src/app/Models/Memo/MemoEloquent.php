@@ -3,9 +3,12 @@
 namespace App\Models\Memo;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Services\Scopes\IsShow;
 
 class MemoEloquent extends Model
 {
+    use IsShow;
+
     /**
      * 形式の定数
      *
@@ -42,4 +45,12 @@ class MemoEloquent extends Model
      * @var array
      */
     protected $attributes = [];
+
+    /**
+     * 多対多 カテゴリ
+     */
+    public function categories()
+    {
+        return $this->belongsToMany('App\Models\Category\CategoryEloquent', 'memo_category', 'memo_id', 'category_id');
+    }
 }
