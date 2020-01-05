@@ -37,7 +37,7 @@ class MemoEloquent extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['title', 'type', 'text', 'is_show'];
 
     /**
      * 属性に対するモデルのデフォルト値

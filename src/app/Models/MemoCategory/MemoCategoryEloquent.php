@@ -18,7 +18,7 @@ class MemoCategoryEloquent extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['memo_id', 'category_id'];
 
     /**
      * 属性に対するモデルのデフォルト値
@@ -26,4 +26,11 @@ class MemoCategoryEloquent extends Model
      * @var array
      */
     protected $attributes = [];
+
+    /**
+     * 日付の自動更新
+     *
+     * @var boolean
+     */
+    public $timestamps = false;
 }

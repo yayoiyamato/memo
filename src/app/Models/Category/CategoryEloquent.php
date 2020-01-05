@@ -21,7 +21,7 @@ class CategoryEloquent extends Model
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['name', 'slug', 'order', 'is_show'];
 
     /**
      * 属性に対するモデルのデフォルト値
@@ -29,8 +29,6 @@ class CategoryEloquent extends Model
      * @var array
      */
     protected $attributes = [];
-
-    public $timestamps = true;
 
     /**
      * 多対多 めも
