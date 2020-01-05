@@ -16,7 +16,6 @@ class CreateMemosTable extends Migration
         Schema::create('memos', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('title', 100);	
-            $table->integer('category_id')->nullable();
             $table->char('type', 2);	
             $table->longText('text');
             $table->boolean('is_show')->default(1);
