@@ -17,6 +17,6 @@ class IsShowScope implements Scope
      */
     public function apply(Builder $builder, Model $model)
     {
-        $builder->where('is_show', config('const.isShow.yes'));
+        $builder->where('is_show', config('const.IS_SHOW.YES'));
     }
 }

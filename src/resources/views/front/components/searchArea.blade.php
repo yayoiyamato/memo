@@ -15,8 +15,8 @@
             <label for="type">形式</label>
             <select name="type">
                 <option value="">すべての形式</option>
-            @foreach($types as $type)
-                <option value="{{ $type['code'] }}">{{ $type['name'] }}</option>
+            @foreach(config('const.TYPES_OF_MEMO') as $key=>$type)
+                <option value="{{ $key }}">{{ $type }}</option>
             @endforeach
             </select>
         </form>

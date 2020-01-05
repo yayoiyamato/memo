@@ -9,21 +9,6 @@ class MemoEloquent extends Model
 {
     use IsShow;
 
-    /**
-     * 形式の定数
-     *
-     * @var array
-     */
-    const TYPES = [
-        [
-            'name' => 'マークダウン',
-            'code' => 'md'
-        ],
-        [
-            'name' => 'スニペット',
-            'code' => 'sn'
-        ]
-    ];
 
     /**
      * モデルと関連しているテーブル

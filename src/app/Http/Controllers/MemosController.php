@@ -16,11 +16,13 @@ class MemosController extends Controller
      */
     public function index()
     {
-        $categories = CategoryEloquent::get();
+        $categories = CategoryEloquent::orderBy('id')->get();
+        $memos = MemoEloquent::orderBy('id')->get();
+
         $view = view('front.pages.index')
                 ->with('title','めも一覧')
-                ->with('types',MemoEloquent::TYPES)
-                ->with('categories', $categories);
+                ->with('categories', $categories)
+                ->with('memos', $memos);
         return $view;
     }
 

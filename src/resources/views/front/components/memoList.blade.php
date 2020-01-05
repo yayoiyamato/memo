@@ -8,138 +8,14 @@
         </tr>
     </thead>
     <tbody>
+    @foreach($memos as $memo) 
         <tr data-href="">
-            <td>Laravel</td>
-            <td>Laravel6.x プロジェクトの始め方</td>
-            <td>マークダウン</td>
-            <td>2019/12/15</td>
+            <td>めもカテゴリ</td>
+            <td>{{ $memo->title }}</td>
+            <td>{{ config('const.TYPES_OF_MEMO')[$memo->type] }}</td>
+            <td>{{ $memo->created_at }}</td>
         </tr>
-        <tr data-href="">
-            <td>PHP</td>
-            <td>クラスの継承</td>
-            <td>マークダウン</td>
-            <td>2019/12/16</td>
-        </tr>
-        <tr data-href="">
-            <td>共通</td>
-            <td>ページトップ</td>
-            <td>スニペット</td>
-            <td>2019/12/20</td>
-        </tr>
-        <tr data-href="">
-            <td>検索フォーム</td>
-            <td>住所自動入力</td>
-            <td>スニペット</td>
-            <td>2019/12/29</td>
-        </tr>
-        <tr data-href="">
-            <td>Laravel</td>
-            <td>Laravel6.x プロジェクトの始め方</td>
-            <td>マークダウン</td>
-            <td>2019/12/15</td>
-        </tr>
-        <tr data-href="">
-            <td>PHP</td>
-            <td>クラスの継承</td>
-            <td>マークダウン</td>
-            <td>2019/12/16</td>
-        </tr>
-        <tr data-href="">
-            <td>共通</td>
-            <td>ページトップ</td>
-            <td>スニペット</td>
-            <td>2019/12/20</td>
-        </tr>
-        <tr data-href="">
-            <td>検索フォーム</td>
-            <td>住所自動入力</td>
-            <td>スニペット</td>
-            <td>2019/12/29</td>
-        </tr>
-        <tr data-href="">
-            <td>Laravel</td>
-            <td>Laravel6.x プロジェクトの始め方</td>
-            <td>マークダウン</td>
-            <td>2019/12/15</td>
-        </tr>
-        <tr data-href="">
-            <td>PHP</td>
-            <td>クラスの継承</td>
-            <td>マークダウン</td>
-            <td>2019/12/16</td>
-        </tr>
-        <tr data-href="">
-            <td>共通</td>
-            <td>ページトップ</td>
-            <td>スニペット</td>
-            <td>2019/12/20</td>
-        </tr>
-        <tr data-href="">
-            <td>検索フォーム</td>
-            <td>住所自動入力</td>
-            <td>スニペット</td>
-            <td>2019/12/29</td>
-        </tr>
-        <tr data-href="">
-            <td>Laravel</td>
-            <td>Laravel6.x プロジェクトの始め方</td>
-            <td>マークダウン</td>
-            <td>2019/12/15</td>
-        </tr>
-        <tr data-href="">
-            <td>PHP</td>
-            <td>クラスの継承</td>
-            <td>マークダウン</td>
-            <td>2019/12/16</td>
-        </tr>
-        <tr data-href="">
-            <td>共通</td>
-            <td>ページトップ</td>
-            <td>スニペット</td>
-            <td>2019/12/20</td>
-        </tr>
-        <tr data-href="">
-            <td>検索フォーム</td>
-            <td>住所自動入力</td>
-            <td>スニペット</td>
-            <td>2019/12/29</td>
-        </tr>
-        <tr data-href="">
-            <td>Laravel</td>
-            <td>Laravel6.x プロジェクトの始め方</td>
-            <td>マークダウン</td>
-            <td>2019/12/15</td>
-        </tr>
-        <tr data-href="">
-            <td>PHP</td>
-            <td>クラスの継承</td>
-            <td>マークダウン</td>
-            <td>2019/12/16</td>
-        </tr>
-        <tr data-href="">
-            <td>共通</td>
-            <td>ページトップ</td>
-            <td>スニペット</td>
-            <td>2019/12/20</td>
-        </tr>
-        <tr data-href="">
-            <td>検索フォーム</td>
-            <td>住所自動入力</td>
-            <td>スニペット</td>
-            <td>2019/12/29</td>
-        </tr>
-        <tr data-href="">
-            <td>Laravel</td>
-            <td>Laravel6.x プロジェクトの始め方</td>
-            <td>マークダウン</td>
-            <td>2019/12/15</td>
-        </tr>
-        <tr data-href="">
-            <td>PHP</td>
-            <td>クラスの継承</td>
-            <td>マークダウン</td>
-            <td>2019/12/16</td>
-        </tr>
+    @endforeach
     </tbody>
 </table>
 
