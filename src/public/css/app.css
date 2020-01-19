@@ -582,23 +582,28 @@ input {
   display: flex;
 }
 .countArea .count {
-  line-height: 20px;
+  line-height: 22px;
 }
-.countArea .pager {
-  margin-left: 30px;
+.countArea .pagination {
+  margin-left: 10px;
   display: flex;
 }
-.countArea .pager a {
-  padding: 0 7px;
-  margin-right: 10px;
+.countArea .pagination a,
+.countArea .pagination span {
+  min-width: 8px;
+  padding: 0 6px;
+  margin-right: 8px;
   text-align: center;
   line-height: 20px;
+  display: inline-block;
   border: 1px solid #ccc;
   height: 20px;
   border-radius: 10px;
 }
-.countArea .pager a.act,
-.countArea .pager a:hover {
+.countArea .pagination a.act,
+.countArea .pagination span.act,
+.countArea .pagination a:hover,
+.countArea .pagination span:hover {
   color: #fff;
   background-color: #f37a8d;
 }

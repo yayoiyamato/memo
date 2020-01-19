@@ -16,7 +16,7 @@ class MemosController extends Controller
     public function index()
     {
         $categories = CategoryEloquent::orderBy('id')->get();
-        $memos = MemoEloquent::orderBy('id')->get();
+        $memos = MemoEloquent::orderBy('id')->paginate(10);
 
         $view = view('front.pages.index')
                 ->with('title','めも一覧')
