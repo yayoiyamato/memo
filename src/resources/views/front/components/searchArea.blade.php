@@ -5,7 +5,8 @@
             <select name="category">
                 <option value="">すべて</option>
             @foreach($categories as $category)
-                <option value="{{ $category->id }}"@if($category->id == $inputData['category']) selected @endif>{{ $category->name }}</option>
+                {{-- /* $inputData['category']がなかった場合エラーになるので修正する */ --}}
+                <option value="{{ $category->id }}"@if($category->id == @$inputData['category']) selected @endif>{{ $category->name }}</option>
             @endforeach
             </select>
         </div>
@@ -14,7 +15,8 @@
             <select name="type">
                 <option value="">すべての形式</option>
             @foreach(config('const.TYPES_OF_MEMO') as $key=>$type)
-                <option value="{{ $key }}"@if($key == $inputData['type']) selected @endif>{{ $type['name'] }}</option>
+                {{-- /* $inputData['type']がなかった場合エラーになるので修正する */ --}}
+                <option value="{{ $key }}"@if($key == @$inputData['type']) selected @endif>{{ $type['name'] }}</option>
             @endforeach
             </select>
         </div>
