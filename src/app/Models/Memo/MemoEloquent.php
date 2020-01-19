@@ -38,4 +38,19 @@ class MemoEloquent extends Model
     {
         return $this->belongsToMany('App\Models\Category\CategoryEloquent', 'memo_category', 'memo_id', 'category_id');
     }
+
+    /**
+     * カテゴリのnameたちをカンマ区切りで返却
+     *
+     * @return string
+     */
+    public function getCategoryNamesAttribute()
+    {
+        $category_names = [];
+        foreach ($this->categories as $category) {
+            $category_names[] = $category->name;
+        }
+        return implode(', ', $category_names);
+    }
+    
 }
