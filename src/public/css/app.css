@@ -548,32 +548,38 @@ input {
   margin-right: 8px;
 }
 .searchArea {
-  display: flex;
-  align-items: center;
   margin-bottom: 50px;
 }
-.searchArea label {
+.searchArea form {
+  display: flex;
+  align-items: flex-end;
+}
+.searchArea form label {
   display: block;
   margin-bottom: 8px;
 }
-.searchArea select {
+.searchArea form select {
   min-width: 200px;
 }
-.searchArea .category {
+.searchArea form input {
+  min-height: 31px;
+}
+.searchArea form .category,
+.searchArea form .type,
+.searchArea form .keyword {
   margin-right: 20px;
 }
-.searchArea .type {
-  margin-right: 20px;
-}
-.searchArea .keyword button {
+.searchArea form button {
+  width: 31px;
+  line-height: 15px;
+  text-align: center;
   background-color: #f37a8d;
   color: #fff;
-  margin-left: 5px;
-  padding: 7px;
+  padding: 8px;
   border: 1px solid #f37a8d;
   transition: 0.16s;
 }
-.searchArea .keyword button:hover {
+.searchArea form button:hover {
   background: #fff;
   color: #f37a8d;
 }

@@ -1,31 +1,27 @@
 <div class="searchArea">
-    <div class="category">
-        <form action="">
+    <form action="{{ $formActionUrl }}" method="get">
+        <div class="category">
             <label for="category">カテゴリ</label>
             <select name="category">
                 <option value="">すべて</option>
             @foreach($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                <option value="{{ $category->id }}"@if($category->id == $inputData['category']) selected @endif>{{ $category->name }}</option>
             @endforeach
             </select>
-        </form>
-    </div>
-    <div class="type">
-        <form action="">
+        </div>
+        <div class="type">
             <label for="type">形式</label>
             <select name="type">
                 <option value="">すべての形式</option>
             @foreach(config('const.TYPES_OF_MEMO') as $key=>$type)
-                <option value="{{ $key }}">{{ $type['name'] }}</option>
+                <option value="{{ $key }}"@if($key == $inputData['type']) selected @endif>{{ $type['name'] }}</option>
             @endforeach
             </select>
-        </form>
-    </div>
-    <div class="keyword">
-        <form action="/">
+        </div>
+        <div class="keyword">
             <label for="keyword">キーワード</label>
-            <input type="text" name="keyword" placeholder="キーワードを入力">
-            <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
-    </div>
+            <input type="text" name="keyword" placeholder="キーワードを入力" value="@if(isset($inputData['keyword'])){{ $inputData['keyword'] }}@endif">
+        </div>
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
 </div>

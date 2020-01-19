@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Memo\MemoEloquent;
 use App\Models\Category\CategoryEloquent;
 
@@ -11,17 +12,21 @@ class MemosController extends Controller
     /**
      * めも一覧
      *
+     * @param View
      * @return View
      */
-    public function index()
+    public function index(Request $request)
     {
         $categories = CategoryEloquent::orderBy('id')->get();
         $memos = MemoEloquent::orderBy('id')->paginate(10);
+        $formActionUrl = '/';
 
         $view = view('front.pages.index')
                 ->with('title','めも一覧')
                 ->with('categories', $categories)
-                ->with('memos', $memos);
+                ->with('memos', $memos)
+                ->with('formActionUrl', $formActionUrl)
+                ->with('inputData', $request->all());
         return $view;
     }
 
