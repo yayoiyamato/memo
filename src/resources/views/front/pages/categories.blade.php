@@ -7,7 +7,7 @@
         <dt><i class="{{ $type['icon_class'] }}"></i>{{ $type['name'] }}</dt>
     @foreach($categories[$key] as $category)
         <dd draggable="true">
-            <a class="category" href="">{{ $category->name }}(4)</a>
+            <a class="category" href="">{{ $category->name }}({{ count($category->memos) }})</a>
             <a class="sort" href=""><i class="fas fa-align-justify"></i></a>
             <a class="trash" href=""><i class="far fa-trash-alt"></i></a>
         </dd>
